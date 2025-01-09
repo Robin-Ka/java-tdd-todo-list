@@ -50,7 +50,15 @@ public class ToDoList {
         return incompleteTasks;
     }
 
-
+    public Task search(String taskName){
+        for (Task task : tasks){
+            if (task.name.equals(taskName)){
+                return task;
+            }
+        }
+        System.out.println("The task was not found or does not exist!");
+        return null;
+    }
 
 
 
