@@ -4,10 +4,40 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class TodoListTest {
+
     @Test
-    public void exampleTest() {
-        String hello = "Hello";
-        Assertions.assertEquals("Hello", hello);
-        Assertions.assertNotEquals("Goodbye", hello);
+    public void testAddTask() {
+
     }
+
+    @Test
+    public void testRemoveTask() {
+
+    }
+
+    @Test
+    public void testSeeTask() {
+
+    }
+
+    @Test
+    public void testChangeStatus() {
+
+    }
+
+    @Test
+    public void testGetCompletedTasks() {
+
+    }
+
+    @Test
+    public void testGetIncompleteTasks() {
+
+    }
+
+    @Test
+    public void testSearch() {
+
+    }
+
 }

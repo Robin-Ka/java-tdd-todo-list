@@ -14,9 +14,26 @@ public class TaskTest {
     }
 
     @Test
+    public void testGetName(){
+        Task task = new Task("Run");
+
+        String name = task.getName();
+        Assertions.assertEquals("Run", name);
+    }
+
+    @Test
     public void testCompleteTask(){
         Task task = new Task("Run");
 
+        task.completeTask();
+        Assertions.assertTrue(task.completed);
+    }
+
+    @Test
+    public void testGetStatus(){
+        Task task = new Task("Run");
+
+        Assertions.assertFalse(task.completed);
         task.completeTask();
         Assertions.assertTrue(task.completed);
     }
