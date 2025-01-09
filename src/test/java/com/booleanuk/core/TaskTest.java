@@ -7,7 +7,7 @@ public class TaskTest {
 
     @Test
     public void validTask(){
-        Task task = new Task();
+        Task task = new Task("Robin");
 
         Assertions.assertTrue(!task.name.isEmpty());
     }
