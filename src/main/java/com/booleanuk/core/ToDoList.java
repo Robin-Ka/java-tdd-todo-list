@@ -1,6 +1,7 @@
 package com.booleanuk.core;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ToDoList {
 
@@ -60,6 +61,23 @@ public class ToDoList {
         return null;
     }
 
+    public ArrayList<String> alphabeticalA(){
+        ArrayList<String> alphabeticalAscending = new ArrayList<>();
+        for (Task task : tasks){
+            alphabeticalAscending.add(task.name);
+        }
+        Collections.sort(alphabeticalAscending);
+        return alphabeticalAscending;
+    }
 
+    public ArrayList<String> alphabeticalD(){
+        ArrayList<String> alphabeticalDescending = new ArrayList<>();
+        for (Task task : tasks){
+            alphabeticalDescending.add(task.name);
+        }
+        Collections.sort(alphabeticalDescending);
+        Collections.reverse(alphabeticalDescending);
+        return alphabeticalDescending;
+    }
 
 }

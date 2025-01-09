@@ -159,7 +159,7 @@ class TodoListTest {
         toDoList.addTask(task3);
         toDoList.addTask(task4);
 
-        Assertions.assertEquals(List.of("a", "b", "c"), toDoList.alphabeticalD());
+        Assertions.assertEquals(List.of("d", "c", "b", "a"), toDoList.alphabeticalD());
     }
 
 
