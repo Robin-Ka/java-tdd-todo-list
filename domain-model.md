@@ -1,14 +1,14 @@
 
 ## Task Class
 
-| Methods                | Variables            | Scenario            | Output                |
-|------------------------|----------------------|---------------------|-----------------------|
-|                        | `boolean completed ` |                     |                       |
-|                        | `String name `       |                     |                       |
-| `void completeTask() ` |                      | A task is completed | Set completed to true |
-|                        |                      |                     |                       |
-|                        |                      |                     |                       |
-|                        |                      |                     |                       |
+| Methods                 | Variables            | Scenario                    | Output                |
+|-------------------------|----------------------|-----------------------------|-----------------------|
+|                         | `boolean completed ` |                             |                       |
+|                         | `String name `       |                             |                       |
+| `void completeTask() `  |                      | A task is completed         | Set completed to true |
+| `String getName() `     |                      | Want to fetch a task name   | Return task name      |
+| `boolean getStatus()  ` |                      | Want to fetch a task status | Return task status    |
+|                         |                      |                             |                       |
 
 
 ## ToDoList Class

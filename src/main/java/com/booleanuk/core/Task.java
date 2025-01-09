@@ -10,6 +10,14 @@ public class Task {
         this.completed = false;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public boolean getStatus(){
+        return this.completed;
+    }
+
     public void completeTask(){
         this.completed = true;
     }
