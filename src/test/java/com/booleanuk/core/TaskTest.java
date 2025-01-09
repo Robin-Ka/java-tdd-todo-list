@@ -6,9 +6,19 @@ import org.junit.jupiter.api.Test;
 public class TaskTest {
 
     @Test
-    public void validTask(){
-        Task task = new Task("Robin");
+    public void testValidTask(){
+        Task task = new Task("Code");
 
-        Assertions.assertTrue(!task.name.isEmpty());
+        Assertions.assertFalse(task.name.isEmpty());
+        Assertions.assertFalse(task.completed);
     }
+
+    @Test
+    public void testCompleteTask(){
+        Task task = new Task("Run");
+
+        task.completeTask();
+        Assertions.assertTrue(task.completed);
+    }
+
 }
