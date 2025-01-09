@@ -132,4 +132,35 @@ class TodoListTest {
         Assertions.assertNull(searchedTask);
     }
 
+    @Test
+    public void testAlphabeticalA() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("d");
+        Task task2 = new Task("c");
+        Task task3 = new Task("b");
+        Task task4 = new Task("a");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.addTask(task4);
+
+        Assertions.assertEquals(List.of("a", "b", "c", "d"), toDoList.alphabeticalA());
+    }
+
+    @Test
+    public void testAlphabeticalD() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        Task task4 = new Task("d");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.addTask(task4);
+
+        Assertions.assertEquals(List.of("a", "b", "c"), toDoList.alphabeticalD());
+    }
+
+
 }
