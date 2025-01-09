@@ -92,6 +92,7 @@ class TodoListTest {
         toDoList.addTask(task1);
         toDoList.addTask(task2);
         toDoList.addTask(task3);
+        toDoList.addTask(task4);
         toDoList.changeStatus(task2, true);
         toDoList.changeStatus(task3, true);
 

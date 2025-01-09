@@ -30,5 +30,28 @@ public class ToDoList {
         return showTasks;
     }
 
+    public ArrayList<Task> getCompletedTasks(){
+        ArrayList<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks){
+            if (task.completed){
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
+    }
+
+    public ArrayList<Task> getIncompleteTasks(){
+        ArrayList<Task> incompleteTasks = new ArrayList<>();
+        for (Task task : tasks){
+            if (!task.completed){
+                incompleteTasks.add(task);
+            }
+        }
+        return incompleteTasks;
+    }
+
+
+
+
 
 }
