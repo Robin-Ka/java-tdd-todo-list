@@ -101,8 +101,35 @@ class TodoListTest {
     }
 
     @Test
-    public void testSearch() {
+    public void testSearchExists() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        Task task4 = new Task("d");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.addTask(task4);
 
+        Task searchedTask = toDoList.search("d");
+        Assertions.assertEquals(task4, searchedTask);
+    }
+
+    @Test
+    public void testSearchDoesntExists() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        Task task4 = new Task("d");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.addTask(task4);
+
+        Task searchedTask = toDoList.search("e");
+        Assertions.assertNull(searchedTask);
     }
 
 }
