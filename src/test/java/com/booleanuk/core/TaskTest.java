@@ -22,20 +22,30 @@ public class TaskTest {
     }
 
     @Test
-    public void testCompleteTask(){
+    public void testChangeStatusTrue(){
         Task task = new Task("Run");
 
-        task.completeTask();
-        Assertions.assertTrue(task.completed);
+        task.setStatus(true);
+        Assertions.assertTrue(task.getStatus());
+    }
+
+    @Test
+    public void testChangeStatusFalse(){
+        Task task = new Task("Run");
+
+        task.setStatus(true);
+        Assertions.assertTrue(task.getStatus());
+        task.setStatus(false);
+        Assertions.assertFalse(task.getStatus());
     }
 
     @Test
     public void testGetStatus(){
         Task task = new Task("Run");
 
-        Assertions.assertFalse(task.completed);
-        task.completeTask();
-        Assertions.assertTrue(task.completed);
+        Assertions.assertFalse(task.getStatus());
+        task.setStatus(true);
+        Assertions.assertTrue(task.getStatus());
     }
 
 }

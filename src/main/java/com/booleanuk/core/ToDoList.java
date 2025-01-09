@@ -10,11 +10,26 @@ public class ToDoList {
         if (!tasks.contains(task)){
             tasks.add(task);
         }
-        System.out.println("This task is already in your ToDo List!");
     }
 
     public void removeTask(String taskName){
         tasks.removeIf(task -> task.getName().equals(taskName));
     }
+
+    public void changeStatus(Task task, boolean completed){
+        if (tasks.contains(task)){
+            task.setStatus(completed);
+        }
+    }
+
+    public ArrayList<String> seeAllTasks(){
+        ArrayList<String> showTasks = new ArrayList<>();
+        for (int i = 0; i < tasks.size(); i++){
+            showTasks.add(i, tasks.get(i).name);
+        }
+        return showTasks;
+    }
+
+
 
 }

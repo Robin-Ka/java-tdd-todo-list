@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class TodoListTest {
 
@@ -32,12 +33,36 @@ class TodoListTest {
     }
 
     @Test
-    public void testSeeTask() {
+    public void testSeeAllTask() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
 
+        Assertions.assertEquals(List.of("a", "b", "c"), toDoList.seeAllTasks());
     }
 
     @Test
     public void testChangeStatus() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+
+        Assertions.assertFalse(task1.getStatus());
+        Assertions.assertFalse(task2.getStatus());
+        Assertions.assertFalse(task3.getStatus());
+        toDoList.changeStatus(task2, true);
+        toDoList.changeStatus(task3, true);
+        Assertions.assertFalse(task1.getStatus());
+        Assertions.assertTrue(task2.getStatus());
+        Assertions.assertTrue(task3.getStatus());
 
     }
 

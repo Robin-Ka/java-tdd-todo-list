@@ -18,7 +18,7 @@ public class Task {
         return this.completed;
     }
 
-    public void completeTask(){
-        this.completed = true;
+    public void setStatus(boolean status){
+        this.completed = status;
     }
 }
