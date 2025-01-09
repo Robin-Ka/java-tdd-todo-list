@@ -9,25 +9,25 @@ class TodoListTest {
 
     @Test
     public void testAddTask() {
-        ArrayList<Task> toDoList = new ArrayList<>();
+        ToDoList toDoList = new ToDoList();
         Task task = new Task("Swim");
 
         toDoList.addTask(task);
-        Assertions.assertTrue(toDoList.contains(task));
+        Assertions.assertTrue(toDoList.tasks.contains(task));
     }
 
     @Test
     public void testRemoveTask() {
-        ArrayList<Task> toDoList = new ArrayList<>();
+        ToDoList toDoList = new ToDoList();
         Task task1 = new Task("Sing");
         Task task2 = new Task("Jump");
         toDoList.addTask(task1);
         toDoList.addTask(task2);
 
-        Assertions.assertTrue(toDoList.contains(task1));
-        Assertions.assertTrue(toDoList.contains(task2));
-        toDoList.removetask("Jump");
-        Assertions.assertFalse(toDoList.contains(task2));
+        Assertions.assertTrue(toDoList.tasks.contains(task1));
+        Assertions.assertTrue(toDoList.tasks.contains(task2));
+        toDoList.removeTask("Jump");
+        Assertions.assertFalse(toDoList.tasks.contains(task2));
 
     }
 
