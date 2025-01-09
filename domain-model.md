@@ -22,6 +22,6 @@
 | ` Arraylist<Task> getCompletedTasks() ` |                              | Want to get only completed tasks                   | Returns all completed tasks                  |
 | ` Arraylist<Task> getInompleteTasks() ` |                              | Want to get only incomplete tasks                  | Returns all incomplete tasks                 |
 | ` void search(Task task) `              |                              | Want to search for tasks                           | Searches for task and informs if not found   |
-| ` void remove(Task task) `              |                              | Want to remove a task                              | removes task from list                       |
+| ` void removeTask(String taskName) `    |                              | Want to remove a task                              | removes task from list                       |
 | ` Arraylist<Task> alphabeticalA() `     |                              | Want to see tasks in alphabetical ascending order  | Shows tasks in alphabetical ascending order  |
 | ` Arraylist<Task> alphabeticalD() `     |                              | Want to see tasks in alphabetical descending order | Shows tasks in alphabetical descending order |
