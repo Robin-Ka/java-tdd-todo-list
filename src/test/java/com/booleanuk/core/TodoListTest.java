@@ -68,11 +68,34 @@ class TodoListTest {
 
     @Test
     public void testGetCompletedTasks() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.changeStatus(task2, true);
+        toDoList.changeStatus(task3, true);
+
+        Assertions.assertEquals(List.of(task2, task3), toDoList.getCompletedTasks());
 
     }
 
     @Test
     public void testGetIncompleteTasks() {
+        ToDoList toDoList = new ToDoList();
+        Task task1 = new Task("a");
+        Task task2 = new Task("b");
+        Task task3 = new Task("c");
+        Task task4 = new Task("d");
+        toDoList.addTask(task1);
+        toDoList.addTask(task2);
+        toDoList.addTask(task3);
+        toDoList.changeStatus(task2, true);
+        toDoList.changeStatus(task3, true);
+
+        Assertions.assertEquals(List.of(task1, task4), toDoList.getIncompleteTasks());
 
     }
 
